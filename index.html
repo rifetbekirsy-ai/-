@@ -1,9 +1,12 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="منصة وسيطك للخدمات الرقمية: شحن ألعاب، رصيد، USDT، وحوالات مالية بسرعة وأمان" />
-  <title>وسيطك | منصة خدمات رقمية</title>  <style>
+  <title>وسيطك | منصة خدمات رقمية</title>
+
+  <style>
     *{
       box-sizing:border-box;
       scroll-behavior:smooth;
@@ -110,46 +113,78 @@
       color: #94a3b8;
       margin-top: 30px;
     }
-  </style></head><body><div class="overlay"><header>
-  <img class="logo" src="https://via.placeholder.com/150" alt="وسيطك" />  <h1>وسيطك</h1>
-  <p>منصة خدمات رقمية وتحويلات مالية سريعة وموثوقة</p>  <nav>
-    <a href="#home">الرئيسية</a>
+  </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<header>
+  <!-- الشعار -->
+  <img class="logo" src="logo.png" alt="وسيطك" />
+
+  <h1>وسيطك</h1>
+  <p>منصة خدمات رقمية وتحويلات مالية سريعة وموثوقة</p>
+
+  <nav>
     <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
     <a href="#order">طلب خدمة</a>
   </nav>
-</header><!-- من نحن --><section id="about" class="container">
+</header>
+
+<!-- من نحن -->
+<section id="about" class="container">
   <div class="card">
     <h3>👋 من نحن</h3>
     <p>
-      منصة وسيطك هي منصة رقمية تهدف لتقديم خدمات الشحن والتحويلات المالية والخدمات الرقمية بطريقة سهلة وآمنة وسريعة،
-      مع توفير تجربة وسيط موثوقة بين العملاء ومقدمي الخدمات.
+      منصة وسيطك هي منصة رقمية تهدف لتقديم خدمات الشحن والتحويلات المالية والخدمات الرقمية بطريقة سهلة وآمنة وسريعة.
     </p>
   </div>
-</section><!-- الخدمات --><section id="services" class="container">  <div class="card">
+</section>
+
+<!-- الخدمات -->
+<section id="services" class="container">
+  <div class="card">
     <h3>💳 الدفع</h3>
     <p>شام كاش - Syriatel Cash - MTN Cash</p>
-  </div>  <div class="card">
+  </div>
+
+  <div class="card">
     <h3>🎮 الخدمات</h3>
     <p>شحن ألعاب - رصيد - USDT - حوالات مالية</p>
     <a class="btn" href="https://wa.me/9630968427194" target="_blank">اطلب عبر واتساب</a>
-  </div></section><!-- الطلب --><section id="order" class="container">  <div class="card">
-    <h3>📩 طلب خدمة</h3><input type="text" id="name" placeholder="الاسم" />
+  </div>
+</section>
 
-<select id="service">
-  <option>شحن ألعاب</option>
-  <option>شحن رصيد</option>
-  <option>USDT</option>
-  <option>حوالات مالية</option>
-</select>
+<!-- الطلب -->
+<section id="order" class="container">
+  <div class="card">
+    <h3>📩 طلب خدمة</h3>
 
-<input type="text" id="amount" placeholder="التفاصيل" />
+    <input type="text" id="name" placeholder="الاسم" />
 
-<button class="btn" onclick="sendOrder()">إرسال عبر واتساب</button>
+    <select id="service">
+      <option>شحن ألعاب</option>
+      <option>شحن رصيد</option>
+      <option>USDT</option>
+      <option>حوالات مالية</option>
+    </select>
 
-  </div></section><footer>
+    <input type="text" id="amount" placeholder="التفاصيل" />
+
+    <button class="btn" onclick="sendOrder()">إرسال عبر واتساب</button>
+  </div>
+</section>
+
+<footer>
   © 2026 وسيطك - جميع الحقوق محفوظة
-</footer></div><script>
+</footer>
+
+</div>
+
+<script>
 function sendOrder() {
   let name = document.getElementById('name').value;
   let service = document.getElementById('service').value;
@@ -160,5 +195,7 @@ function sendOrder() {
   let url = "https://wa.me/9630968427194?text=" + encodeURIComponent(message);
   window.open(url, '_blank');
 }
-</script></body>
+</script>
+
+</body>
 </html>

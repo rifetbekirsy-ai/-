@@ -7,27 +7,31 @@
   <title>وسيطك | منصة خدمات رقمية</title>
 
   <style>
-    *{
-      box-sizing:border-box;
-      scroll-behavior:smooth;
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #fff;
-      background: url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center/cover;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
     }
 
     .overlay {
-      background: rgba(0,0,0,0.78);
       min-height: 100vh;
       padding-bottom: 40px;
     }
 
+    /* ===== HEADER ===== */
     header {
       text-align: center;
-      padding: 25px 15px;
+      padding: 30px 15px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
     }
 
     .logo {
@@ -36,12 +40,18 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #38bdf8;
-      margin-top: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
     }
 
     h1 {
       margin: 10px 0 5px;
-      font-size: 42px;
+      font-size: 40px;
       color: #38bdf8;
     }
 
@@ -51,7 +61,7 @@
     }
 
     nav {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     nav a {
@@ -59,8 +69,14 @@
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
 
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* ===== SECTIONS ===== */
     .container {
       padding: 20px;
       max-width: 900px;
@@ -68,45 +84,53 @@
     }
 
     .card {
-      background: rgba(30,41,59,0.92);
+      background: rgba(30,41,59,0.95);
       margin: 15px auto;
-      padding: 18px;
-      border-radius: 12px;
+      padding: 20px;
+      border-radius: 15px;
       max-width: 600px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
     }
 
     .card h3 {
       color: #38bdf8;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     input, select {
-      width: 90%;
-      padding: 10px;
+      width: 100%;
+      padding: 12px;
       margin: 8px 0;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
       outline: none;
     }
 
+    /* ===== BUTTON ===== */
     .btn {
       display: inline-block;
       margin-top: 12px;
       padding: 12px 18px;
-      background: #22c55e;
+      background: linear-gradient(45deg, #22c55e, #16a34a);
       color: #fff;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: bold;
       cursor: pointer;
       text-decoration: none;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: #16a34a;
+      transform: scale(1.05);
     }
 
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 20px;
@@ -121,9 +145,7 @@
 <div class="overlay">
 
 <header>
-  <!-- الشعار -->
   <img class="logo" src="logo.png" alt="وسيطك" />
-
   <h1>وسيطك</h1>
   <p>منصة خدمات رقمية وتحويلات مالية سريعة وموثوقة</p>
 
@@ -134,17 +156,17 @@
   </nav>
 </header>
 
-<!-- من نحن -->
+<!-- ABOUT -->
 <section id="about" class="container">
   <div class="card">
     <h3>👋 من نحن</h3>
     <p>
-      منصة وسيطك هي منصة رقمية تهدف لتقديم خدمات الشحن والتحويلات المالية والخدمات الرقمية بطريقة سهلة وآمنة وسريعة.
+      منصة وسيطك تقدم خدمات رقمية مثل الشحن، التحويلات المالية، USDT وخدمات الوساطة بسرعة وأمان.
     </p>
   </div>
 </section>
 
-<!-- الخدمات -->
+<!-- SERVICES -->
 <section id="services" class="container">
   <div class="card">
     <h3>💳 الدفع</h3>
@@ -154,11 +176,11 @@
   <div class="card">
     <h3>🎮 الخدمات</h3>
     <p>شحن ألعاب - رصيد - USDT - حوالات مالية</p>
-    <a class="btn" href="https://wa.me/9630968427194" target="_blank">اطلب عبر واتساب</a>
+    <a class="btn" href="https://wa.me/9630968427194" target="_blank">💬 اطلب عبر واتساب</a>
   </div>
 </section>
 
-<!-- الطلب -->
+<!-- ORDER -->
 <section id="order" class="container">
   <div class="card">
     <h3>📩 طلب خدمة</h3>

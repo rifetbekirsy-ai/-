@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="منصة وسيطك للخدمات الرقمية: شحن، رصيد، USDT، وحوالات مالية" />
+  <meta name="description" content="وسيطك - خدمات رقمية آمنة تشمل الشحن، USDT، والحوالات المالية" />
   <title>وسيطك | منصة خدمات رقمية</title>
 
   <style>
@@ -14,12 +14,11 @@
 
     body {
       margin: 0;
-      font-family: "Arial", sans-serif;
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: #fff;
     }
 
-    /* ===== HEADER ===== */
     header {
       text-align: center;
       padding: 40px 20px;
@@ -37,18 +36,13 @@
 
     h1 {
       margin: 15px 0 5px;
-      font-size: 38px;
+      font-size: 40px;
       color: #38bdf8;
     }
 
     p {
       color: #cbd5e1;
       margin: 5px 0;
-      font-size: 15px;
-    }
-
-    nav {
-      margin-top: 15px;
     }
 
     nav a {
@@ -56,14 +50,12 @@
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: #fff;
     }
 
-    /* ===== SECTIONS ===== */
     .container {
       padding: 25px;
       max-width: 900px;
@@ -76,16 +68,16 @@
       padding: 20px;
       border-radius: 14px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-      transition: 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-    }
-
-    .card h3 {
+    .card h2 {
       color: #38bdf8;
       margin-bottom: 10px;
+    }
+
+    .price {
+      color: #22c55e;
+      font-weight: bold;
     }
 
     input, select {
@@ -93,14 +85,11 @@
       padding: 12px;
       margin: 8px 0;
       border-radius: 10px;
-      border: none;
-      outline: none;
+      border: 1px solid #334155;
       background: #0f172a;
       color: #fff;
-      border: 1px solid #334155;
     }
 
-    /* ===== BUTTON ===== */
     .btn {
       display: inline-block;
       margin-top: 12px;
@@ -111,14 +100,12 @@
       font-weight: bold;
       text-decoration: none;
       cursor: pointer;
-      transition: 0.3s;
     }
 
     .btn:hover {
       background: #16a34a;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 20px;
@@ -131,49 +118,45 @@
 
 <body>
 
+<!-- 1. الترحيب -->
 <header>
   <img class="logo" src="logo.png" alt="وسيطك" />
-  <h1>وسيطك</h1>
-  <p>منصة خدمات رقمية وتحويلات مالية آمنة وسريعة</p>
+  <h1>مرحباً بك في وسيطك</h1>
+  <p>منصة موثوقة للخدمات الرقمية، الشحن، والتحويلات المالية بسرعة وأمان</p>
 
   <nav>
-    <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
-    <a href="#order">طلب خدمة</a>
+    <a href="#about">من نحن</a>
   </nav>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="container">
-  <div class="card">
-    <h3>👋 من نحن</h3>
-    <p>
-      منصة وسيطك تقدم خدمات رقمية موثوقة تشمل الشحن، USDT، والحوالات المالية بسرعة وأمان.
-    </p>
-  </div>
-</section>
-
-<!-- SERVICES -->
+<!-- 2. الخدمات + الأسعار + الدفع -->
 <section id="services" class="container">
 
   <div class="card">
-    <h3>💳 طرق الدفع</h3>
+    <h2>💳 طرق الدفع</h2>
     <p>✔ شام كاش</p>
     <p>✔ USDT (TRC20)</p>
   </div>
 
   <div class="card">
-    <h3>🎮 الخدمات</h3>
-    <p>شحن ألعاب - رصيد - USDT - حوالات مالية</p>
-    <a class="btn" href="https://wa.me/9630968427194" target="_blank">💬 اطلب عبر واتساب</a>
+    <h2>🎮 الخدمات والأسعار</h2>
+    <p>شحن ألعاب — <span class="price">سريع وبأسعار منافسة</span></p>
+    <p>شحن رصيد — <span class="price">تنفيذ فوري</span></p>
+    <p>USDT — <span class="price">تحويل آمن</span></p>
+    <p>حوالات مالية — <span class="price">داخل وخارج البلاد</span></p>
+
+    <a class="btn" href="https://wa.me/9630968427194" target="_blank">
+      💬 اطلب عبر واتساب
+    </a>
   </div>
 
 </section>
 
-<!-- ORDER -->
-<section id="order" class="container">
+<!-- طلب -->
+<section class="container">
   <div class="card">
-    <h3>📩 طلب خدمة</h3>
+    <h2>📩 طلب خدمة</h2>
 
     <input type="text" id="name" placeholder="الاسم" />
 
@@ -187,6 +170,33 @@
     <input type="text" id="amount" placeholder="التفاصيل" />
 
     <button class="btn" onclick="sendOrder()">إرسال عبر واتساب</button>
+  </div>
+</section>
+
+<!-- 3. من نحن -->
+<section id="about" class="container">
+  <div class="card">
+    <h2>👤 من نحن</h2>
+
+    <p>
+      منصة <b>وسيطك</b> هي منصة رقمية متخصصة في تقديم خدمات الوساطة المالية والخدمات الرقمية بطريقة آمنة وموثوقة.
+    </p>
+
+    <p>
+      نحن نعمل كوسيط بين العميل ومزود الخدمة لضمان سرعة التنفيذ وتقليل المخاطر، مع الحفاظ على الشفافية الكاملة في التعامل.
+    </p>
+
+    <p>
+      نلتزم بتقديم:
+      ✔ سرعة في التنفيذ  
+      ✔ أمان في التعاملات  
+      ✔ دعم مستمر للعملاء  
+      ✔ أسعار تنافسية  
+    </p>
+
+    <p>
+      هدفنا هو بناء ثقة حقيقية مع العملاء وتقديم تجربة احترافية في الخدمات الرقمية.
+    </p>
   </div>
 </section>
 
@@ -208,4 +218,4 @@ function sendOrder() {
 </script>
 
 </body>
-</html>  
+</html>

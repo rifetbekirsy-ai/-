@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم</title>
+</head>
+
+<body style="background:#0f172a;color:#fff;font-family:Arial;padding:20px;">
+
+<h1 style="color:#38bdf8;">لوحة التحكم</h1>
+
+<div style="background:#1e293b;padding:20px;border-radius:12px;max-width:500px;">
+
+  <h3>تعديل نص الترحيب</h3>
+
+  <input id="welcome" placeholder="اكتب نص الترحيب" style="width:100%;padding:10px;margin:8px;">
+
+  <button onclick="save()" style="padding:10px;background:#22c55e;border:none;color:#fff;width:100%;">
+    حفظ
+  </button>
+
+  <p id="done"></p>
+</div>
+
+<script>
+function save(){
+  let text = document.getElementById("welcome").value;
+  localStorage.setItem("welcomeText", text);
+  document.getElementById("done").innerText = "تم الحفظ ✔️";
+}
+</script>
+
+</body>
+</html>

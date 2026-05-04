@@ -2,9 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="وسيطك - خدمات رقمية آمنة تشمل الشحن، USDT، والحوالات المالية" />
-  <title>وسيطك | منصة خدمات رقمية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="وسيطك - منصة خدمات رقمية آمنة وسريعة" />
+  <title>وسيطك | الصفحة الرئيسية</title>
 
   <style>
     * {
@@ -19,6 +19,7 @@
       color: #fff;
     }
 
+    /* ===== HEADER ===== */
     header {
       text-align: center;
       padding: 40px 20px;
@@ -36,13 +37,17 @@
 
     h1 {
       margin: 15px 0 5px;
-      font-size: 40px;
+      font-size: 38px;
       color: #38bdf8;
     }
 
     p {
       color: #cbd5e1;
       margin: 5px 0;
+    }
+
+    nav {
+      margin-top: 12px;
     }
 
     nav a {
@@ -56,6 +61,7 @@
       color: #fff;
     }
 
+    /* ===== SECTIONS ===== */
     .container {
       padding: 25px;
       max-width: 900px;
@@ -68,6 +74,11 @@
       padding: 20px;
       border-radius: 14px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
     }
 
     .card h2 {
@@ -100,6 +111,7 @@
       font-weight: bold;
       text-decoration: none;
       cursor: pointer;
+      transition: 0.3s;
     }
 
     .btn:hover {
@@ -118,19 +130,23 @@
 
 <body>
 
-<!-- 1. الترحيب -->
+<!-- ===== HEADER ===== -->
 <header>
   <img class="logo" src="logo.png" alt="وسيطك" />
-  <h1>مرحباً بك في وسيطك</h1>
-  <p>منصة موثوقة للخدمات الرقمية، الشحن، والتحويلات المالية بسرعة وأمان</p>
+
+  <!-- الترحيب من لوحة التحكم -->
+  <h1 id="welcomeText">مرحباً بك في وسيطك</h1>
+
+  <p>منصة خدمات رقمية آمنة وسريعة</p>
 
   <nav>
     <a href="#services">الخدمات</a>
+    <a href="#order">طلب خدمة</a>
     <a href="#about">من نحن</a>
   </nav>
 </header>
 
-<!-- 2. الخدمات + الأسعار + الدفع -->
+<!-- ===== SERVICES ===== -->
 <section id="services" class="container">
 
   <div class="card">
@@ -140,11 +156,9 @@
   </div>
 
   <div class="card">
-    <h2>🎮 الخدمات والأسعار</h2>
-    <p>شحن ألعاب — <span class="price">سريع وبأسعار منافسة</span></p>
-    <p>شحن رصيد — <span class="price">تنفيذ فوري</span></p>
-    <p>USDT — <span class="price">تحويل آمن</span></p>
-    <p>حوالات مالية — <span class="price">داخل وخارج البلاد</span></p>
+    <h2>🎮 الخدمات</h2>
+    <p>شحن ألعاب - رصيد - USDT - حوالات مالية</p>
+    <p class="price">تنفيذ سريع وبأسعار مناسبة</p>
 
     <a class="btn" href="https://wa.me/9630968427194" target="_blank">
       💬 اطلب عبر واتساب
@@ -153,8 +167,8 @@
 
 </section>
 
-<!-- طلب -->
-<section class="container">
+<!-- ===== ORDER ===== -->
+<section id="order" class="container">
   <div class="card">
     <h2>📩 طلب خدمة</h2>
 
@@ -173,37 +187,38 @@
   </div>
 </section>
 
-<!-- 3. من نحن -->
+<!-- ===== ABOUT ===== -->
 <section id="about" class="container">
   <div class="card">
     <h2>👤 من نحن</h2>
 
     <p>
-      منصة <b>وسيطك</b> هي منصة رقمية متخصصة في تقديم خدمات الوساطة المالية والخدمات الرقمية بطريقة آمنة وموثوقة.
+      منصة <b>وسيطك</b> هي منصة رقمية متخصصة في تقديم خدمات الوساطة المالية والخدمات الرقمية.
     </p>
 
     <p>
-      نحن نعمل كوسيط بين العميل ومزود الخدمة لضمان سرعة التنفيذ وتقليل المخاطر، مع الحفاظ على الشفافية الكاملة في التعامل.
+      نحن نعمل كحلقة وصل بين العميل ومقدمي الخدمات لضمان:
     </p>
 
     <p>
-      نلتزم بتقديم:
-      ✔ سرعة في التنفيذ  
-      ✔ أمان في التعاملات  
-      ✔ دعم مستمر للعملاء  
-      ✔ أسعار تنافسية  
+      ✔ سرعة التنفيذ<br>
+      ✔ أمان عالي في التعامل<br>
+      ✔ شفافية كاملة<br>
+      ✔ دعم مستمر للعملاء
     </p>
 
     <p>
-      هدفنا هو بناء ثقة حقيقية مع العملاء وتقديم تجربة احترافية في الخدمات الرقمية.
+      هدفنا هو بناء ثقة طويلة الأمد مع العملاء وتقديم خدمات احترافية.
     </p>
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   © 2026 وسيطك - جميع الحقوق محفوظة
 </footer>
 
+<!-- ===== SCRIPTS ===== -->
 <script>
 function sendOrder() {
   let name = document.getElementById('name').value;
@@ -214,6 +229,12 @@ function sendOrder() {
 
   let url = "https://wa.me/9630968427194?text=" + encodeURIComponent(message);
   window.open(url, '_blank');
+}
+
+/* قراءة رسالة الترحيب من لوحة التحكم */
+let savedText = localStorage.getItem("welcomeText");
+if(savedText){
+  document.getElementById("welcomeText").innerText = savedText;
 }
 </script>
 

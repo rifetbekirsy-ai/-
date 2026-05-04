@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="وسيطك - منصة خدمات رقمية آمنة وسريعة" />
-  <title>وسيطك | الصفحة الرئيسية</title>
+  <meta name="description" content="وسيطك - منصة خدمات رقمية آمنة وموثوقة" />
+  <title>وسيطك | منصة خدمات رقمية</title>
 
   <style>
     * {
@@ -15,46 +15,48 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
+      background: #0b1220;
       color: #fff;
     }
 
     /* ===== HEADER ===== */
     header {
       text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border-bottom: 1px solid #334155;
+      padding: 45px 20px;
+      background: linear-gradient(135deg, #111827, #0b1220);
+      border-bottom: 1px solid #1f2937;
     }
 
     .logo {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #38bdf8;
+      box-shadow: 0 0 20px rgba(56,189,248,0.3);
     }
 
     h1 {
       margin: 15px 0 5px;
-      font-size: 38px;
+      font-size: 40px;
       color: #38bdf8;
     }
 
     p {
       color: #cbd5e1;
-      margin: 5px 0;
+      font-size: 15px;
     }
 
     nav {
-      margin-top: 12px;
+      margin-top: 15px;
     }
 
     nav a {
-      color: #38bdf8;
       margin: 0 10px;
       text-decoration: none;
+      color: #38bdf8;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -69,16 +71,18 @@
     }
 
     .card {
-      background: #1e293b;
-      margin: 15px auto;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      background: #111827;
+      border: 1px solid #1f2937;
+      margin: 18px auto;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
       transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+      border-color: #38bdf8;
     }
 
     .card h2 {
@@ -86,43 +90,55 @@
       margin-bottom: 10px;
     }
 
-    .price {
-      color: #22c55e;
-      font-weight: bold;
-    }
-
     input, select {
       width: 100%;
       padding: 12px;
       margin: 8px 0;
       border-radius: 10px;
-      border: 1px solid #334155;
-      background: #0f172a;
+      border: 1px solid #1f2937;
+      background: #0b1220;
       color: #fff;
+      outline: none;
     }
 
+    /* ===== BUTTON ===== */
     .btn {
       display: inline-block;
       margin-top: 12px;
       padding: 12px 18px;
-      background: #22c55e;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
       color: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: bold;
       text-decoration: none;
       cursor: pointer;
+      border: none;
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: #16a34a;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(34,197,94,0.4);
     }
 
+    /* ===== VERIFY BADGE ===== */
+    .verify {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: rgba(34,197,94,0.15);
+      border: 1px solid #22c55e;
+      border-radius: 10px;
+      color: #22c55e;
+      font-size: 13px;
+    }
+
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       color: #94a3b8;
-      border-top: 1px solid #334155;
+      border-top: 1px solid #1f2937;
       margin-top: 30px;
     }
   </style>
@@ -134,15 +150,16 @@
 <header>
   <img class="logo" src="logo.png" alt="وسيطك" />
 
-  <!-- الترحيب من لوحة التحكم -->
   <h1 id="welcomeText">مرحباً بك في وسيطك</h1>
+  <p>منصة خدمات رقمية آمنة وسريعة وموثوقة</p>
 
-  <p>منصة خدمات رقمية آمنة وسريعة</p>
+  <div class="verify">✔ Verified Platform</div>
 
   <nav>
     <a href="#services">الخدمات</a>
     <a href="#order">طلب خدمة</a>
     <a href="#about">من نحن</a>
+    <a href="verify.html">التوثيق</a>
   </nav>
 </header>
 
@@ -158,7 +175,6 @@
   <div class="card">
     <h2>🎮 الخدمات</h2>
     <p>شحن ألعاب - رصيد - USDT - حوالات مالية</p>
-    <p class="price">تنفيذ سريع وبأسعار مناسبة</p>
 
     <a class="btn" href="https://wa.me/9630968427194" target="_blank">
       💬 اطلب عبر واتساب
@@ -193,22 +209,19 @@
     <h2>👤 من نحن</h2>
 
     <p>
-      منصة <b>وسيطك</b> هي منصة رقمية متخصصة في تقديم خدمات الوساطة المالية والخدمات الرقمية.
+      منصة وسيطك هي منصة خدمات رقمية تعمل كوسيط موثوق بين العملاء ومقدمي الخدمات.
     </p>
 
     <p>
-      نحن نعمل كحلقة وصل بين العميل ومقدمي الخدمات لضمان:
+      نحن نركز على:
+      ✔ الأمان  
+      ✔ السرعة  
+      ✔ الشفافية  
+      ✔ دعم العملاء
     </p>
 
     <p>
-      ✔ سرعة التنفيذ<br>
-      ✔ أمان عالي في التعامل<br>
-      ✔ شفافية كاملة<br>
-      ✔ دعم مستمر للعملاء
-    </p>
-
-    <p>
-      هدفنا هو بناء ثقة طويلة الأمد مع العملاء وتقديم خدمات احترافية.
+      جميع العمليات تتم بطريقة واضحة وآمنة لضمان ثقة المستخدم.
     </p>
   </div>
 </section>
@@ -218,7 +231,7 @@
   © 2026 وسيطك - جميع الحقوق محفوظة
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
+<!-- ===== SCRIPT ===== -->
 <script>
 function sendOrder() {
   let name = document.getElementById('name').value;
@@ -231,10 +244,10 @@ function sendOrder() {
   window.open(url, '_blank');
 }
 
-/* قراءة رسالة الترحيب من لوحة التحكم */
-let savedText = localStorage.getItem("welcomeText");
-if(savedText){
-  document.getElementById("welcomeText").innerText = savedText;
+/* تعديل الترحيب من لوحة التحكم */
+let saved = localStorage.getItem("welcomeText");
+if(saved){
+  document.getElementById("welcomeText").innerText = saved;
 }
 </script>
 

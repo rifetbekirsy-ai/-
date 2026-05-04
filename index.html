@@ -19,7 +19,6 @@
       color: #fff;
     }
 
-    /* ===== HEADER ===== */
     header {
       text-align: center;
       padding: 45px 20px;
@@ -63,14 +62,12 @@
       color: #fff;
     }
 
-    /* ===== CONTAINER ===== */
     .container {
       padding: 25px;
       max-width: 900px;
       margin: auto;
     }
 
-    /* ===== CARD ===== */
     .card {
       background: #111827;
       border: 1px solid #1f2937;
@@ -91,12 +88,6 @@
       margin-bottom: 10px;
     }
 
-    .price {
-      color: #22c55e;
-      font-weight: bold;
-    }
-
-    /* ===== INPUT ===== */
     input, select {
       width: 100%;
       padding: 12px;
@@ -108,7 +99,6 @@
       outline: none;
     }
 
-    /* ===== BUTTON ===== */
     .btn {
       display: inline-block;
       margin-top: 12px;
@@ -120,7 +110,6 @@
       text-decoration: none;
       cursor: pointer;
       border: none;
-      transition: 0.3s;
     }
 
     .btn:hover {
@@ -128,7 +117,6 @@
       box-shadow: 0 0 15px rgba(34,197,94,0.4);
     }
 
-    /* ===== CONTACT BADGE ===== */
     .badge {
       display: inline-block;
       margin-top: 10px;
@@ -153,7 +141,6 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <img class="logo" src="logo.png" alt="وسيطك" />
 
@@ -166,10 +153,12 @@
     <a href="#services">الخدمات</a>
     <a href="#order">طلب خدمة</a>
     <a href="#about">من نحن</a>
+
+    <!-- 🔥 رابط التوثيق الذي كان ناقص -->
+    <a href="verify.html">التوثيق</a>
   </nav>
 </header>
 
-<!-- ===== SERVICES ===== -->
 <section id="services" class="container">
 
   <div class="card">
@@ -181,7 +170,6 @@
   <div class="card">
     <h2>🎮 الخدمات</h2>
     <p>شحن ألعاب - رصيد - USDT - حوالات مالية</p>
-    <p class="price">تنفيذ سريع وبأسعار مناسبة</p>
 
     <a class="btn" href="https://wa.me/9630968427194" target="_blank">
       💬 اطلب عبر واتساب
@@ -190,7 +178,6 @@
 
 </section>
 
-<!-- ===== ORDER ===== -->
 <section id="order" class="container">
   <div class="card">
     <h2>📩 طلب خدمة</h2>
@@ -210,49 +197,27 @@
   </div>
 </section>
 
-<!-- ===== ABOUT + CONTACT ===== -->
 <section id="about" class="container">
-
   <div class="card">
     <h2>👤 من نحن</h2>
 
     <p>
-      منصة وسيطك هي منصة رقمية تعمل كوسيط موثوق بين العملاء ومقدمي الخدمات.
+      منصة وسيطك تقدم خدمات رقمية موثوقة تعمل كوسيط بين العملاء ومقدمي الخدمات.
     </p>
 
     <p>
-      نهدف إلى تقديم خدمات:
-      ✔ آمنة  
-      ✔ سريعة  
-      ✔ شفافة  
-      ✔ بأسعار مناسبة
+      ✔ سرعة التنفيذ  
+      ✔ أمان عالي  
+      ✔ شفافية كاملة  
+      ✔ دعم مستمر
     </p>
   </div>
-
-  <!-- CONTACT -->
-  <div class="card">
-    <h2>📞 تواصل معنا</h2>
-
-    <p>📧 البريد الإلكتروني: <b>rifet.bekir.sy@gmail.com</b></p>
-    <p>💬 واتساب: 9630968427194+</p>
-
-    <p style="color:#22c55e; font-weight:bold;">
-      ⏱️ نستجيب خلال 24 ساعة
-    </p>
-
-    <a class="btn" href="mailto:rifet.bekir.sy@gmail.com">
-      إرسال بريد إلكتروني
-    </a>
-  </div>
-
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   © 2026 وسيطك - جميع الحقوق محفوظة
 </footer>
 
-<!-- ===== SCRIPT ===== -->
 <script>
 function sendOrder() {
   let name = document.getElementById('name').value;
@@ -265,7 +230,6 @@ function sendOrder() {
   window.open(url, '_blank');
 }
 
-/* ترحيب من لوحة التحكم */
 let saved = localStorage.getItem("welcomeText");
 if(saved){
   document.getElementById("welcomeText").innerText = saved;

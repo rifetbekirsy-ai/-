@@ -45,6 +45,7 @@
     p {
       color: #cbd5e1;
       font-size: 15px;
+      margin: 5px 0;
     }
 
     nav {
@@ -56,25 +57,25 @@
       text-decoration: none;
       color: #38bdf8;
       font-weight: bold;
-      transition: 0.3s;
     }
 
     nav a:hover {
       color: #fff;
     }
 
-    /* ===== SECTIONS ===== */
+    /* ===== CONTAINER ===== */
     .container {
       padding: 25px;
       max-width: 900px;
       margin: auto;
     }
 
+    /* ===== CARD ===== */
     .card {
       background: #111827;
       border: 1px solid #1f2937;
-      margin: 18px auto;
       padding: 22px;
+      margin: 18px 0;
       border-radius: 16px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.4);
       transition: 0.3s;
@@ -90,6 +91,12 @@
       margin-bottom: 10px;
     }
 
+    .price {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    /* ===== INPUT ===== */
     input, select {
       width: 100%;
       padding: 12px;
@@ -121,8 +128,8 @@
       box-shadow: 0 0 15px rgba(34,197,94,0.4);
     }
 
-    /* ===== VERIFY BADGE ===== */
-    .verify {
+    /* ===== CONTACT BADGE ===== */
+    .badge {
       display: inline-block;
       margin-top: 10px;
       padding: 6px 12px;
@@ -131,9 +138,9 @@
       border-radius: 10px;
       color: #22c55e;
       font-size: 13px;
+      font-weight: bold;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 25px;
@@ -153,13 +160,12 @@
   <h1 id="welcomeText">مرحباً بك في وسيطك</h1>
   <p>منصة خدمات رقمية آمنة وسريعة وموثوقة</p>
 
-  <div class="verify">✔ Verified Platform</div>
+  <div class="badge">✔ منصة موثوقة - Verified Service</div>
 
   <nav>
     <a href="#services">الخدمات</a>
     <a href="#order">طلب خدمة</a>
     <a href="#about">من نحن</a>
-    <a href="verify.html">التوثيق</a>
   </nav>
 </header>
 
@@ -175,6 +181,7 @@
   <div class="card">
     <h2>🎮 الخدمات</h2>
     <p>شحن ألعاب - رصيد - USDT - حوالات مالية</p>
+    <p class="price">تنفيذ سريع وبأسعار مناسبة</p>
 
     <a class="btn" href="https://wa.me/9630968427194" target="_blank">
       💬 اطلب عبر واتساب
@@ -203,27 +210,41 @@
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- ===== ABOUT + CONTACT ===== -->
 <section id="about" class="container">
+
   <div class="card">
     <h2>👤 من نحن</h2>
 
     <p>
-      منصة وسيطك هي منصة خدمات رقمية تعمل كوسيط موثوق بين العملاء ومقدمي الخدمات.
+      منصة وسيطك هي منصة رقمية تعمل كوسيط موثوق بين العملاء ومقدمي الخدمات.
     </p>
 
     <p>
-      نحن نركز على:
-      ✔ الأمان  
-      ✔ السرعة  
-      ✔ الشفافية  
-      ✔ دعم العملاء
-    </p>
-
-    <p>
-      جميع العمليات تتم بطريقة واضحة وآمنة لضمان ثقة المستخدم.
+      نهدف إلى تقديم خدمات:
+      ✔ آمنة  
+      ✔ سريعة  
+      ✔ شفافة  
+      ✔ بأسعار مناسبة
     </p>
   </div>
+
+  <!-- CONTACT -->
+  <div class="card">
+    <h2>📞 تواصل معنا</h2>
+
+    <p>📧 البريد الإلكتروني: <b>rifet.bekir.sy@gmail.com</b></p>
+    <p>💬 واتساب: 9630968427194+</p>
+
+    <p style="color:#22c55e; font-weight:bold;">
+      ⏱️ نستجيب خلال 24 ساعة
+    </p>
+
+    <a class="btn" href="mailto:rifet.bekir.sy@gmail.com">
+      إرسال بريد إلكتروني
+    </a>
+  </div>
+
 </section>
 
 <!-- ===== FOOTER ===== -->
@@ -244,7 +265,7 @@ function sendOrder() {
   window.open(url, '_blank');
 }
 
-/* تعديل الترحيب من لوحة التحكم */
+/* ترحيب من لوحة التحكم */
 let saved = localStorage.getItem("welcomeText");
 if(saved){
   document.getElementById("welcomeText").innerText = saved;
